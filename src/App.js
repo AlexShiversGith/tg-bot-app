@@ -1,13 +1,13 @@
-import { useEffect } from 'react';
 import './App.css';
-import Header from './components/header/Header';
+import { useEffect } from 'react';
 import { useTelegram } from './hooks/useTelegram';
+import Header from './components/header/Header';
 
 function App() {
   const {onToggleButton, tg} = useTelegram()
 
   useEffect(() => {
-    tg.ready()
+    tg.ready();
   }, [])
 
   return (
