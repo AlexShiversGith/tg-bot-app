@@ -35,11 +35,12 @@ const ProductList = () => {
             newItems = [...addedItems, product]
         }
         setAddedItems(newItems)
+
         if (newItems.length === 0) {
             tg.MainButton.hide()
         } else {
             tg.MainButton.show()
-            tg.MainButton.serParams({
+            tg.MainButton.setParams({
                 text: `Buy ${getTotalPrice(newItems)}`
             })
         }
